@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
 
     public void KillPlayer()
     {
+        if (PlayerCollider.enabled == false) return; 
         PlayerCollider.enabled = false;
         PlayerAnimator.enabled = false;
         PlayerRigidBody.AddForceY(JumpForce, ForceMode2D.Impulse);
